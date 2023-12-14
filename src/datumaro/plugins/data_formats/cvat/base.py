@@ -359,6 +359,7 @@ class CvatBase(SubsetBase):
     def _load_items(self, parsed):
         for frame_id, item_desc in parsed.items():
             name = item_desc.get("name", "frame_%06d.png" % int(frame_id))
+            name = name + ".PNG"
 
             image_path_opt_1 = osp.join(self._images_dir, name)
             image_path_opt_2 = (
