@@ -367,6 +367,8 @@ class CvatBase(SubsetBase):
             )
             if osp.exists(image_path_opt_1):
                 image = image_path_opt_1
+            elif osp.exists(image_path_opt_1.lower()):
+                image = image_path_opt_1.lower()
             elif image_path_opt_2 and osp.exists(image_path_opt_2):
                 image = image_path_opt_2
             elif "name" not in item_desc:
